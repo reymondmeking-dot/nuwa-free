@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Cursor",
+    "url": "https://cursor.com/",
+    "category": "AI 编程",
+    "free": "Hobby 免费，有限 Agent 请求和 Tab 补全",
+    "registration": "AI 功能建议登录",
+    "best_for": ["本地代码开发", "修 bug", "重构", "接 API", "网站性能优化"],
+    "why_useful_for_reymao": "v0 / Bolt 生成初稿后，用 Cursor 精修到可上线。"
+  },
+  {
+    "name": "v0",
+    "url": "https://v0.app/",
+    "category": "前端生成",
+    "free": "Free 计划，含 credits",
+    "registration": "需要",
+    "best_for": ["Landing Page", "Dashboard", "SaaS 官网", "React/Next.js 组件"],
+    "why_useful_for_reymao": "最适合快速生成高质量网站页面和组件初稿。"
+  },
+  {
+    "name": "Bolt.new",
+    "url": "https://bolt.new/",
+    "category": "无代码建站/应用",
+    "free": "Free $0，有每日/月度 tokens 限额",
+    "registration": "需要",
+    "best_for": ["完整网站原型", "Web App MVP", "AI 工具目录", "小型应用"],
+    "why_useful_for_reymao": "比 v0 更偏完整可运行应用，适合快速做 MVP。"
+  },
+  {
+    "name": "Krea",
+    "url": "https://www.krea.ai/",
+    "category": "图像/视觉设计",
+    "free": "Free plan，daily credits",
+    "registration": "需要",
+    "best_for": ["Hero 图", "视觉 moodboard", "产品概念图", "网站背景", "图片增强"],
+    "why_useful_for_reymao": "为网站和商业方案快速生成高质量视觉素材。"
+  },
+  {
+    "name": "Gamma",
+    "url": "https://gamma.app/zh-cn",
+    "category": "PPT/文档/网站式演示",
+    "free": "Free 计划，注册有限额度",
+    "registration": "需要",
+    "best_for": ["商业方案", "项目汇报", "AI 分享课件", "个人品牌介绍"],
+    "why_useful_for_reymao": "把管理经验和 AI 方法论快速包装成演示稿。"
+  },
+  {
+    "name": "Napkin",
+    "url": "https://www.napkin.ai/",
+    "category": "信息图/流程图",
+    "free": "Free Forever，500 AI credits/week",
+    "registration": "需要",
+    "best_for": ["流程图", "信息图", "商业模型图", "方法论图解"],
+    "why_useful_for_reymao": "把复杂经验变成可传播、可展示的视觉模型。"
+  },
+  {
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "AI 搜索/调研",
+    "free": "基础搜索免费",
+    "registration": "基础可选，高级需要",
+    "best_for": ["竞品分析", "趋势调研", "技术选型", "带来源搜索"],
+    "why_useful_for_reymao": "做项目之前快速判断方向、事实和来源。"
+  },
+  {
+    "name": "Clipdrop",
+    "url": "https://clipdrop.co/",
+    "category": "图片处理",
+    "free": "Free plan，多工具每日限额",
+    "registration": "部分免登录，更多额度需登录",
+    "best_for": ["去背景", "图片清理", "补光", "文字移除", "图片放大"],
+    "why_useful_for_reymao": "替代轻量 Photoshop 工作，快速处理网站素材。"
+  }
+]
