@@ -1,0 +1,45 @@
+{
+  "name": "nuwa-free",
+  "version": "1.1.0",
+  "description": "女娲免费 AI 工具工作流 —— 为 ReyMao 精选的 8 个免费/有免费额度 AI 工具清单（静态站点 + JSON 数据 + JSON Schema）。",
+  "author": "ReyMao",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "homepage": "https://github.com/reymondmeking-dot/nuwa-free#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reymondmeking-dot/nuwa-free.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reymondmeking-dot/nuwa-free/issues"
+  },
+  "keywords": [
+    "nuwa-free",
+    "ai-tools",
+    "ReyMao",
+    "ai-directory",
+    "free-ai-tools"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "nuwa-free": "./cli/nuwa-free.mjs"
+  },
+  "files": [
+    "cli/",
+    "index.html",
+    "nuwa-free-tools.json",
+    "nuwa-free-tools.schema.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "node cli/nuwa-free.mjs preview",
+    "preview": "node cli/nuwa-free.mjs preview",
+    "validate": "node cli/nuwa-free.mjs validate",
+    "build": "node cli/nuwa-free.mjs build",
+    "lint-html": "node -e \"process.stdout.write('lint-html: OK (no linter configured; add htmlhint if需要)\\n')\""
+  }
+}

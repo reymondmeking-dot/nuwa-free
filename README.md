@@ -13,7 +13,9 @@
 - [每个工具怎么用](#每个工具怎么用)
 - [使用建议](#使用建议)
 - [本仓库内容](#本仓库内容)
+- [安装与使用 (macOS / Windows)](#安装与使用-macos--windows)
 - [本地预览](#本地预览)
+- [作者](#作者)
 - [License](#license)
 
 ## 为什么叫 nuwa-free
@@ -189,33 +191,96 @@ A premium futuristic AI workspace, dark background, glassmorphism panels, blue a
 ## 本仓库内容
 
 ```text
-README.md                 中文说明和工作流
-index.html                可视化单页说明
-nuwa-free-tools.json      8 个工具结构化数据
-.gitignore                忽略 OS/编辑器/日志等文件
-LICENSE                   MIT 许可证
+README.md                     中文说明和工作流
+index.html                    可视化单页说明
+nuwa-free-tools.json          8 个工具结构化数据
+nuwa-free-tools.schema.json   JSON Schema 数据结构定义
+package.json                  Node CLI 元数据 (author: ReyMao)
+cli/nuwa-free.mjs             跨平台 CLI (validate / preview / build)
+.gitignore                    忽略 OS/编辑器/日志/node_modules 等
+LICENSE                       MIT 许可证 (© 2026 ReyMao)
 ```
+
+## 安装与使用 (macOS / Windows)
+
+本仓库带一个**跨平台 Node CLI**（Node 18+，零运行时依赖），在 macOS 与 Windows 上命令**完全一致**。
+
+### 环境要求
+
+- Node.js 18 或以上（`node -v` 应输出 `v18.x` 及以上）
+- 无需 Python，无需 Ruby，无需 Go
+
+### 安装
+
+```bash
+# macOS / Linux（zsh / bash）
+git clone https://github.com/reymondmeking-dot/nuwa-free.git
+cd nuwa-free
+npm install
+```
+
+```powershell
+# Windows（PowerShell 或 Git Bash 皆可）
+git clone https://github.com/reymondmeking-dot/nuwa-free.git
+cd nuwa-free
+npm install
+```
+
+> `npm install` 目前**不引入任何生产依赖**（`package.json` 里没有 `dependencies`），只是初始化 lockfile 和 `node_modules/.bin/nuwa-free` 链接。若跳过此步，也可以直接 `node cli/nuwa-free.mjs <command>`。
+
+### 常用命令（macOS 与 Windows 相同）
+
+| 命令 | 作用 |
+| --- | --- |
+| `npm run dev` | 启动本地静态服务器，浏览器打开 <http://localhost:8080/> |
+| `npm run preview` | 同上，语义化别名 |
+| `npm run validate` | 用 JSON Schema 校验 `nuwa-free-tools.json` |
+| `npm run build` | 静态站点，无需构建（占位命令） |
+| `npx nuwa-free --help` | 查看 CLI 用法 |
+| `node cli/nuwa-free.mjs preview --port 3000` | 自定义端口 |
+
+### macOS 备注
+
+- 端口 8080 若被占用，运行 `node cli/nuwa-free.mjs preview --port 8081`。
+- 若曾用 `python -m http.server` 预览过、想改用 CLI，直接 `npm run dev` 即可，二者等价。
+
+### Windows 备注
+
+- CLI 用 Node 内置 `http` 起服务，**不依赖** `python` / `python3`，Windows 上没装 Python 也能跑。
+- 推荐使用 PowerShell、Windows Terminal 或 Git Bash。命令与 macOS 完全一致，无需 `Set-ExecutionPolicy`（本仓库不提供 `.ps1` 脚本）。
+- 若 Windows Defender / 防火墙首次弹窗询问是否允许 Node 监听本地端口，选择“允许专用网络”即可。
 
 ## 本地预览
 
-本项目是零依赖静态站点，任意 HTTP 服务器都能跑起来。推荐用 Python 内置服务器：
+推荐使用内置 CLI：
 
 ```bash
-# Python 3
-python -m http.server 8080
-
-# 然后浏览器打开
-# http://localhost:8080/
+npm run dev
+# 或
+node cli/nuwa-free.mjs preview
 ```
 
-或者用 Node 的 `npx`（无需全局安装）：
+浏览器打开 <http://localhost:8080/> 即可查看。
+
+如果暂时不想装 npm，也可用替代方案：
 
 ```bash
+# Node（无需全局安装）
 npx --yes serve -l 8080 .
+
+# Python 3（若本机已装）
+python -m http.server 8080
 ```
 
 想直接双击 `index.html` 打开也可以，但通过本地服务器访问才能保证 `nuwa-free-tools.json` 的相对路径链接工作正常。
 
+## 作者
+
+- **ReyMao** — 项目发起人 / 维护者
+- 仓库：<https://github.com/reymondmeking-dot/nuwa-free>
+
+本仓库中所有工具选择、工作流描述、图文与代码，均围绕 ReyMao 的 UI / 网站 / AI 项目落地场景整理和维护。
+
 ## License
 
-本项目采用 [MIT License](LICENSE) 开源。
+本项目采用 [MIT License](LICENSE) 开源，Copyright © 2026 **ReyMao**。
