@@ -2,8 +2,19 @@
 
 **女娲免费 AI 工具工作流** —— 为 ReyMao 的网站设计、AI 产品原型、商业表达和内容生产精选的 8 个免费/有免费额度工具。
 
-> 核查时间：2026-06-30  
+> 核查时间：2026-06-30
 > 来源：使用 Playwright 核查 30 个 AI 工具官网/定价页后，筛选出最适合 UI/网站设计师与 AI 项目落地的 8 个。
+
+## 目录
+
+- [为什么叫 nuwa-free](#为什么叫-nuwa-free)
+- [8 个核心工具](#8-个核心工具)
+- [推荐工作流](#推荐工作流)
+- [每个工具怎么用](#每个工具怎么用)
+- [使用建议](#使用建议)
+- [本仓库内容](#本仓库内容)
+- [本地预览](#本地预览)
+- [License](#license)
 
 ## 为什么叫 nuwa-free
 
@@ -181,8 +192,30 @@ A premium futuristic AI workspace, dark background, glassmorphism panels, blue a
 README.md                 中文说明和工作流
 index.html                可视化单页说明
 nuwa-free-tools.json      8 个工具结构化数据
+.gitignore                忽略 OS/编辑器/日志等文件
+LICENSE                   MIT 许可证
 ```
+
+## 本地预览
+
+本项目是零依赖静态站点，任意 HTTP 服务器都能跑起来。推荐用 Python 内置服务器：
+
+```bash
+# Python 3
+python -m http.server 8080
+
+# 然后浏览器打开
+# http://localhost:8080/
+```
+
+或者用 Node 的 `npx`（无需全局安装）：
+
+```bash
+npx --yes serve -l 8080 .
+```
+
+想直接双击 `index.html` 打开也可以，但通过本地服务器访问才能保证 `nuwa-free-tools.json` 的相对路径链接工作正常。
 
 ## License
 
-MIT
+本项目采用 [MIT License](LICENSE) 开源。

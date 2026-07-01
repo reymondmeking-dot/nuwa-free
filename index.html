@@ -3,8 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#080b13" />
   <title>nuwa-free｜ReyMao 免费 AI 工具工作流</title>
   <meta name="description" content="nuwa-free：为网站设计、AI 产品原型、商业表达精选的 8 个免费 AI 工具。" />
+  <meta name="author" content="ReyMao" />
+  <meta name="keywords" content="AI 工具, 免费 AI, Cursor, v0, Bolt.new, Krea, Gamma, Napkin, Perplexity, Clipdrop, AI 工作流" />
+  <link rel="canonical" href="https://github.com/reymondmeking-dot/nuwa-free" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="nuwa-free" />
+  <meta property="og:title" content="nuwa-free｜ReyMao 免费 AI 工具工作流" />
+  <meta property="og:description" content="从 30 个 AI 工具中精选出 8 个免费/有免费额度的核心工具，覆盖调研、结构、表达、原型、开发、视觉到上线的完整工作流。" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:url" content="https://github.com/reymondmeking-dot/nuwa-free" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="nuwa-free｜ReyMao 免费 AI 工具工作流" />
+  <meta name="twitter:description" content="8 个免费 AI 工具，覆盖从想法到上线的完整工作流。" />
+
+  <!-- Inline SVG favicon (无需额外文件) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2339d4ff'/%3E%3Cstop offset='1' stop-color='%23a36bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,-apple-system,Segoe UI,Noto Sans SC,sans-serif' font-weight='900' font-size='34' fill='%2307101f'%3E女%3C/text%3E%3C/svg%3E" />
   <style>
     :root{--bg:#080b13;--panel:#0f1628;--panel2:#121b31;--text:#eef4ff;--muted:#9aa9c7;--line:rgba(255,255,255,.12);--cyan:#39d4ff;--blue:#5d8cff;--purple:#a36bff;--green:#34dc8c;--yellow:#ffd166;--pink:#ff6ea9}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 10% -10%,rgba(93,140,255,.45),transparent 34%),radial-gradient(circle at 90% 0%,rgba(163,107,255,.28),transparent 32%),linear-gradient(180deg,#080b13,#0b1020 48%,#080b13);color:var(--text)}
@@ -17,7 +38,7 @@
   <div class="wrap">
     <nav class="nav">
       <a class="brand" href="#"><span class="logo">女</span><span>nuwa-free</span></a>
-      <div class="navlinks"><a href="#workflow">工作流</a><a href="#tools">8 个工具</a><a href="#matrix">使用矩阵</a><a href="https://github.com/reymondmeking-dot/nuwa-free" target="_blank">GitHub</a></div>
+      <div class="navlinks"><a href="#workflow">工作流</a><a href="#tools">8 个工具</a><a href="#matrix">使用矩阵</a><a href="https://github.com/reymondmeking-dot/nuwa-free" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 上查看源码">GitHub</a></div>
     </nav>
 
     <header class="hero">
@@ -78,7 +99,17 @@ const tools = [
   ['Perplexity','https://www.perplexity.ai/','AI 搜索/调研','基础搜索免费','基础可选，高级需要',['竞品分析','趋势调研','技术选型'],'做项目之前快速判断方向、事实和来源。'],
   ['Clipdrop','https://clipdrop.co/','图片处理','Free plan，多工具每日限额','部分免登录，更多额度需登录',['去背景','图片清理','补光/放大/文字移除'],'替代轻量 Photoshop 工作，快速处理网站素材。']
 ];
-document.getElementById('toolGrid').innerHTML = tools.map((t,i)=>`<article class="tool"><div class="toolTop"><h3>${t[0]}</h3><span class="num">#${i+1}</span></div><div class="tags"><span class="tag">${t[2]}</span><span class="tag free">${t[3]}</span></div><p><b>注册：</b>${t[4]}</p><p>${t[6]}</p><ul>${t[5].map(x=>`<li>${x}</li>`).join('')}</ul><a class="open" href="${t[1]}" target="_blank">打开 ${t[0]}</a></article>`).join('');
+document.getElementById('toolGrid').innerHTML = tools.map((t,i)=>`<article class="tool"><div class="toolTop"><h3>${t[0]}</h3><span class="num">#${i+1}</span></div><div class="tags"><span class="tag">${t[2]}</span><span class="tag free">${t[3]}</span></div><p><b>注册：</b>${t[4]}</p><p>${t[6]}</p><ul>${t[5].map(x=>`<li>${x}</li>`).join('')}</ul><a class="open" href="${t[1]}" target="_blank" rel="noopener noreferrer" aria-label="打开 ${t[0]} 官网（新窗口）">打开 ${t[0]}</a></article>`).join('');
 </script>
+<noscript>
+  <section style="margin-top:36px;padding:22px;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(255,255,255,.045);color:#cdd8ee;line-height:1.7">
+    <h2 style="margin:0 0 12px">当前浏览器未启用 JavaScript</h2>
+    <p>工具卡片由 JavaScript 渲染，请启用 JS 后刷新。你也可以直接查看
+      <a href="nuwa-free-tools.json" style="color:#39d4ff">nuwa-free-tools.json</a>
+      或
+      <a href="https://github.com/reymondmeking-dot/nuwa-free" style="color:#39d4ff" rel="noopener noreferrer">GitHub 仓库</a>。
+    </p>
+  </section>
+</noscript>
 </body>
 </html>

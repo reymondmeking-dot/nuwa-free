@@ -1,0 +1,39 @@
+# ---- OS ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ---- 日志 / 临时 ----
+*.log
+*.tmp
+*.bak
+*.old
+
+# ---- Node / 构建产物（预留，本项目当前为纯静态站点）----
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# ---- 环境变量 ----
+.env
+.env.local
+.env.*.local
+
+# ---- Python（预留）----
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reymondmeking-dot/nuwa-free/nuwa-free-tools.schema.json",
+  "title": "nuwa-free tools list",
+  "description": "为 ReyMao 精选的免费/有免费额度 AI 工具清单结构化定义。",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "name",
+      "url",
+      "category",
+      "free",
+      "registration",
+      "best_for",
+      "why_useful_for_reymao"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "工具名称"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https?://",
+        "description": "工具官方网址"
+      },
+      "category": {
+        "type": "string",
+        "minLength": 1,
+        "description": "工具类别，例如 AI 编程 / 前端生成 / 图片处理"
+      },
+      "free": {
+        "type": "string",
+        "minLength": 1,
+        "description": "免费额度/免费计划的说明"
+      },
+      "registration": {
+        "type": "string",
+        "minLength": 1,
+        "description": "是否需要注册及说明"
+      },
+      "best_for": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": "最适合的使用场景标签列表"
+      },
+      "why_useful_for_reymao": {
+        "type": "string",
+        "minLength": 1,
+        "description": "为什么这个工具对 ReyMao 的工作流有用"
+      }
+    }
+  }
+}
