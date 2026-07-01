@@ -1,5 +1,9 @@
 # nuwa-free
 
+[![Live](https://img.shields.io/badge/live-reymondmeking--dot.github.io%2Fnuwa--free-blue)](https://reymondmeking-dot.github.io/nuwa-free/)
+[![CI](https://github.com/reymondmeking-dot/nuwa-free/actions/workflows/ci.yml/badge.svg)](https://github.com/reymondmeking-dot/nuwa-free/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 **女娲免费 AI 工具工作流** —— 为 ReyMao 的网站设计、AI 产品原型、商业表达和内容生产精选的 8 个免费/有免费额度工具。
 
 > 核查时间：2026-06-30
