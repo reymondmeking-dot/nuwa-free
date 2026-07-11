@@ -196,7 +196,9 @@ A premium futuristic AI workspace, dark background, glassmorphism panels, blue a
 
 ```text
 README.md                     中文说明和工作流
-index.html                    可视化单页说明
+index.html                    语义化页面结构与 SEO 元数据
+styles.css                   响应式视觉样式与可访问性状态
+app.js                       从 JSON 加载、搜索和分类筛选工具
 nuwa-free-tools.json          8 个工具结构化数据
 nuwa-free-tools.schema.json   JSON Schema 数据结构定义
 package.json                  Node CLI 元数据 (author: ReyMao)
@@ -239,7 +241,9 @@ npm install
 | `npm run dev` | 启动本地静态服务器，浏览器打开 <http://localhost:8080/> |
 | `npm run preview` | 同上，语义化别名 |
 | `npm run validate` | 用 JSON Schema 校验 `nuwa-free-tools.json` |
-| `npm run build` | 静态站点，无需构建（占位命令） |
+| `npm run lint-html` | 校验页面元数据、资源引用和关键容器 |
+| `npm run build` | 校验后生成仅含公开站点文件的 `dist/` |
+| `npm run check` | 依次运行数据校验、HTML 检查与生产构建 |
 | `npx nuwa-free --help` | 查看 CLI 用法 |
 | `node cli/nuwa-free.mjs preview --port 3000` | 自定义端口 |
 
@@ -276,7 +280,7 @@ npx --yes serve -l 8080 .
 python -m http.server 8080
 ```
 
-想直接双击 `index.html` 打开也可以，但通过本地服务器访问才能保证 `nuwa-free-tools.json` 的相对路径链接工作正常。
+页面会通过 `fetch` 读取 `nuwa-free-tools.json`，因此请使用内置预览服务器访问；直接双击 `index.html` 时浏览器通常会阻止本地 JSON 请求。
 
 ## 作者
 

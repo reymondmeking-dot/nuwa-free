@@ -1,6 +1,6 @@
 {
   "name": "nuwa-free",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "女娲免费 AI 工具工作流 —— 为 ReyMao 精选的 8 个免费/有免费额度 AI 工具清单（静态站点 + JSON 数据 + JSON Schema）。",
   "author": "ReyMao",
   "license": "MIT",
@@ -30,9 +30,12 @@
   "files": [
     "cli/",
     "index.html",
+    "styles.css",
+    "app.js",
     "nuwa-free-tools.json",
     "nuwa-free-tools.schema.json",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "scripts": {
@@ -40,6 +43,7 @@
     "preview": "node cli/nuwa-free.mjs preview",
     "validate": "node cli/nuwa-free.mjs validate",
     "build": "node cli/nuwa-free.mjs build",
-    "lint-html": "node -e \"process.stdout.write('lint-html: OK (no linter configured; add htmlhint if需要)\\n')\""
+    "lint-html": "node cli/nuwa-free.mjs check-html",
+    "check": "npm run validate && npm run lint-html && npm run build"
   }
 }

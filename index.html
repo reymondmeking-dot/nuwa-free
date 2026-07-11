@@ -5,111 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#080b13" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
   <title>nuwa-free｜ReyMao 免费 AI 工具工作流</title>
   <meta name="description" content="nuwa-free：为网站设计、AI 产品原型、商业表达精选的 8 个免费 AI 工具。" />
   <meta name="author" content="ReyMao" />
   <meta name="keywords" content="AI 工具, 免费 AI, Cursor, v0, Bolt.new, Krea, Gamma, Napkin, Perplexity, Clipdrop, AI 工作流" />
-  <link rel="canonical" href="https://github.com/reymondmeking-dot/nuwa-free" />
+  <link rel="canonical" href="https://reymondmeking-dot.github.io/nuwa-free/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="nuwa-free" />
   <meta property="og:title" content="nuwa-free｜ReyMao 免费 AI 工具工作流" />
-  <meta property="og:description" content="从 30 个 AI 工具中精选出 8 个免费/有免费额度的核心工具，覆盖调研、结构、表达、原型、开发、视觉到上线的完整工作流。" />
+  <meta property="og:description" content="覆盖调研、结构、表达、原型、开发、视觉到上线的免费 AI 工具工作流。" />
   <meta property="og:locale" content="zh_CN" />
-  <meta property="og:url" content="https://github.com/reymondmeking-dot/nuwa-free" />
+  <meta property="og:url" content="https://reymondmeking-dot.github.io/nuwa-free/" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="nuwa-free｜ReyMao 免费 AI 工具工作流" />
-  <meta name="twitter:description" content="8 个免费 AI 工具，覆盖从想法到上线的完整工作流。" />
+  <meta name="twitter:description" content="免费 AI 工具，覆盖从想法到上线的完整工作流。" />
 
-  <!-- Inline SVG favicon (无需额外文件) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2339d4ff'/%3E%3Cstop offset='1' stop-color='%23a36bff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,-apple-system,Segoe UI,Noto Sans SC,sans-serif' font-weight='900' font-size='34' fill='%2307101f'%3E女%3C/text%3E%3C/svg%3E" />
-  <style>
-    :root{--bg:#080b13;--panel:#0f1628;--panel2:#121b31;--text:#eef4ff;--muted:#9aa9c7;--line:rgba(255,255,255,.12);--cyan:#39d4ff;--blue:#5d8cff;--purple:#a36bff;--green:#34dc8c;--yellow:#ffd166;--pink:#ff6ea9}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 10% -10%,rgba(93,140,255,.45),transparent 34%),radial-gradient(circle at 90% 0%,rgba(163,107,255,.28),transparent 32%),linear-gradient(180deg,#080b13,#0b1020 48%,#080b13);color:var(--text)}
-    a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 64px}.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:40px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:grid;place-items:center;color:#07101f;font-weight:900;box-shadow:0 0 40px rgba(57,212,255,.35)}.navlinks{display:flex;gap:10px;flex-wrap:wrap}.navlinks a{color:var(--muted);font-size:14px;padding:8px 10px;border-radius:10px}.navlinks a:hover{background:rgba(255,255,255,.07);color:var(--text)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch}.panel{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.035));border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.36);backdrop-filter:blur(14px)}.heroText{padding:44px}.badge{display:inline-flex;align-items:center;gap:8px;color:#c9f5ff;border:1px solid rgba(57,212,255,.32);background:rgba(57,212,255,.08);padding:8px 12px;border-radius:999px;font-size:13px}.hero h1{font-size:58px;line-height:.96;margin:20px 0 16px;letter-spacing:-.07em}.hero p{font-size:17px;line-height:1.8;color:var(--muted);margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);font-weight:700}.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#06111f;border:0}.btn.secondary{background:rgba(255,255,255,.06);color:var(--text)}.heroCard{padding:24px;display:flex;flex-direction:column;gap:12px}.metric{padding:18px;border-radius:18px;background:rgba(8,11,19,.55);border:1px solid var(--line)}.metric b{font-size:34px;display:block}.metric span{color:var(--muted);font-size:13px}.metric:nth-child(1) b{color:var(--green)}.metric:nth-child(2) b{color:var(--cyan)}.metric:nth-child(3) b{color:var(--yellow)}
-    section{margin-top:36px}.sectionTitle{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}.sectionTitle h2{font-size:28px;margin:0;letter-spacing:-.04em}.sectionTitle p{color:var(--muted);margin:0;max-width:620px;line-height:1.6}.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:18px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.045);position:relative;overflow:hidden}.step:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--purple))}.step small{color:var(--cyan);font-weight:800}.step h3{margin:10px 0 8px}.step p{color:var(--muted);line-height:1.6;font-size:14px;margin:0}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.tool{padding:18px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));min-height:280px;display:flex;flex-direction:column}.toolTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.tool h3{margin:0;font-size:20px}.num{color:var(--muted);font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.tag{font-size:12px;color:#cfd9f2;border:1px solid var(--line);background:rgba(255,255,255,.045);border-radius:999px;padding:5px 8px}.tag.free{color:#bcffd9;border-color:rgba(52,220,140,.35);background:rgba(52,220,140,.08)}.tool p{color:var(--muted);line-height:1.62;font-size:14px;margin:0 0 12px}.tool ul{padding-left:18px;margin:0 0 14px;color:#cdd8ee;font-size:14px;line-height:1.6}.tool .open{margin-top:auto;color:#dff8ff;background:rgba(57,212,255,.09);border:1px solid rgba(57,212,255,.25);padding:10px 12px;border-radius:13px;text-align:center;font-size:14px;font-weight:700}.matrix{padding:22px}.matrix pre{white-space:pre-wrap;color:#d8e5ff;line-height:1.8;background:rgba(8,11,19,.52);border:1px solid var(--line);border-radius:18px;padding:18px;overflow:auto}.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:36px}@media(max-width:980px){.hero{grid-template-columns:1fr}.tools,.workflow{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:44px}}@media(max-width:640px){.tools,.workflow{grid-template-columns:1fr}.heroText{padding:26px}.hero h1{font-size:38px}.nav{align-items:flex-start;flex-direction:column}}
-  </style>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <div class="wrap">
-    <nav class="nav">
-      <a class="brand" href="#"><span class="logo">女</span><span>nuwa-free</span></a>
-      <div class="navlinks"><a href="#workflow">工作流</a><a href="#tools">8 个工具</a><a href="#matrix">使用矩阵</a><a href="https://github.com/reymondmeking-dot/nuwa-free" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 上查看源码">GitHub</a></div>
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="nuwa-free 首页"><span class="logo" aria-hidden="true">女</span><span>nuwa-free</span></a>
+      <div class="navlinks">
+        <a href="#workflow">工作流</a>
+        <a href="#tools">工具目录</a>
+        <a href="#matrix">使用矩阵</a>
+        <a href="https://github.com/reymondmeking-dot/nuwa-free" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
     </nav>
 
-    <header class="hero">
-      <div class="panel heroText">
-        <span class="badge">ReyMao 专属 · 免费 AI 工具工作流</span>
-        <h1>用 8 个免费 AI 工具，完成从想法到上线。</h1>
-        <p>nuwa-free 从 30 个 AI 工具中提炼出最适合网站设计、AI 产品原型、商业表达和内容生产的 8 个核心工具：Cursor、v0、Bolt.new、Krea、Gamma、Napkin、Perplexity、Clipdrop。</p>
-        <div class="actions"><a class="btn primary" href="#tools">查看工具</a><a class="btn secondary" href="nuwa-free-tools.json">下载 JSON</a></div>
-      </div>
-      <div class="panel heroCard">
-        <div class="metric"><b>8</b><span>核心免费/有免费额度工具</span></div>
-        <div class="metric"><b>30</b><span>原始核查网站数量</span></div>
-        <div class="metric"><b>1</b><span>完整创作到上线工作流</span></div>
-      </div>
-    </header>
+    <main id="main-content" tabindex="-1">
+      <header class="hero" id="top">
+        <div class="panel heroText">
+          <span class="badge">ReyMao · 免费 AI 工具工作流</span>
+          <h1>用合适的免费 AI 工具，完成从想法到上线。</h1>
+          <p>nuwa-free 把调研、结构、商业表达、产品原型、代码开发与视觉处理串成一条可复用的工作流。工具数据只维护一份 JSON，页面会自动同步。</p>
+          <div class="actions">
+            <a class="btn primary" href="#tools">查找工具</a>
+            <a class="btn secondary" href="./nuwa-free-tools.json" download="nuwa-free-tools.json">下载 JSON</a>
+          </div>
+        </div>
+        <div class="panel heroCard" aria-label="项目概览">
+          <div class="metric"><b id="toolCount" aria-live="polite">—</b><span>核心免费或有免费额度工具</span></div>
+          <div class="metric"><b>7</b><span>从调研到上线的关键阶段</span></div>
+          <div class="metric"><b>1</b><span>可复用的完整交付工作流</span></div>
+        </div>
+      </header>
 
-    <section id="workflow">
-      <div class="sectionTitle"><h2>推荐工作流</h2><p>不是单点工具堆砌，而是把调研、结构、方案、页面、代码和视觉素材串起来。</p></div>
-      <div class="workflow">
-        <div class="step"><small>01</small><h3>调研</h3><p>Perplexity 查询趋势、竞品、技术方案，并保留来源。</p></div>
-        <div class="step"><small>02</small><h3>结构</h3><p>Napkin 把复杂信息变成流程图、信息图和模型图。</p></div>
-        <div class="step"><small>03</small><h3>表达</h3><p>Gamma 输出商业方案、PPT、网页式演示文档。</p></div>
-        <div class="step"><small>04</small><h3>原型</h3><p>v0 做高质量前端，Bolt.new 做可运行 Web App。</p></div>
-        <div class="step"><small>05</small><h3>开发</h3><p>Cursor 精修代码、修 bug、优化性能、接 API。</p></div>
-        <div class="step"><small>06</small><h3>视觉</h3><p>Krea 生成视觉素材，Clipdrop 快速清理和优化图片。</p></div>
-        <div class="step"><small>07</small><h3>上线</h3><p>检查版权、性能、响应式和文案后部署上线。</p></div>
-        <div class="step"><small>08</small><h3>复用</h3><p>把流程沉淀成模板、组件库和自己的 AI 工作法。</p></div>
-      </div>
-    </section>
+      <section id="workflow" aria-labelledby="workflow-title">
+        <div class="sectionTitle">
+          <h2 id="workflow-title">推荐工作流</h2>
+          <p>避免堆砌工具：先确认每个阶段的目标，再选择最合适的能力。</p>
+        </div>
+        <ol class="workflow">
+          <li class="step"><small>01</small><h3>调研</h3><p>查询趋势、竞品和技术方案，并保留可核查来源。</p></li>
+          <li class="step"><small>02</small><h3>结构</h3><p>把复杂信息变成流程图、信息图和清晰模型。</p></li>
+          <li class="step"><small>03</small><h3>表达</h3><p>输出商业方案、汇报材料与网页式演示文档。</p></li>
+          <li class="step"><small>04</small><h3>原型</h3><p>生成高质量前端界面与可运行 Web App 初稿。</p></li>
+          <li class="step"><small>05</small><h3>开发</h3><p>精修代码、修复问题、优化性能并接入 API。</p></li>
+          <li class="step"><small>06</small><h3>视觉</h3><p>生成、清理和优化图片等上线所需视觉素材。</p></li>
+          <li class="step"><small>07</small><h3>上线</h3><p>核对版权、可访问性、性能和响应式后部署。</p></li>
+          <li class="step"><small>08</small><h3>复用</h3><p>沉淀模板、组件和自己的 AI 协作方法。</p></li>
+        </ol>
+      </section>
 
-    <section id="tools">
-      <div class="sectionTitle"><h2>8 个工具说明</h2><p>每个工具都保留网址、免费情况、注册要求和最适合你的用途。</p></div>
-      <div class="tools" id="toolGrid"></div>
-    </section>
+      <section id="tools" aria-labelledby="tools-title">
+        <div class="sectionTitle">
+          <h2 id="tools-title">工具目录</h2>
+          <p>可按名称、用途或分类搜索，筛选状态会同步到地址栏，便于分享。</p>
+        </div>
+        <div class="tool-controls" role="search">
+          <div class="field search-field">
+            <label for="toolSearch">搜索工具或用途</label>
+            <input id="toolSearch" type="search" placeholder="例如：原型、图片、代码…" autocomplete="off" />
+          </div>
+          <div class="field category-field">
+            <label for="categoryFilter">分类</label>
+            <select id="categoryFilter"><option value="">全部分类</option></select>
+          </div>
+          <button class="btn secondary clear-filter" id="clearFilter" type="button" disabled>清除筛选</button>
+        </div>
+        <p class="result-summary" id="resultSummary" role="status" aria-live="polite">正在加载工具数据…</p>
+        <div class="tools" id="toolGrid" aria-busy="true"></div>
+        <noscript>
+          <div class="empty-state">当前浏览器未启用 JavaScript。你仍可直接查看 <a href="./nuwa-free-tools.json">工具 JSON 数据</a>。</div>
+        </noscript>
+      </section>
 
-    <section id="matrix" class="panel matrix">
-      <div class="sectionTitle"><h2>一眼看懂怎么搭配</h2><p>真正高效的是组合使用。</p></div>
-      <pre>网站 / 产品项目：
-Perplexity → Napkin → Gamma → v0 → Bolt.new → Cursor → Krea / Clipdrop → 上线
+      <section id="matrix" class="panel matrix" aria-labelledby="matrix-title">
+        <div class="sectionTitle">
+          <h2 id="matrix-title">一眼看懂怎么搭配</h2>
+          <p>高效来自清晰的上下游关系，而不是一次打开所有工具。</p>
+        </div>
+        <div class="matrix-grid">
+          <article><h3>网站 / 产品项目</h3><p>Perplexity → Napkin → Gamma → v0 → Bolt.new → Cursor → Krea / Clipdrop → 上线</p></article>
+          <article><h3>内容 / 商业表达</h3><p>Perplexity → Napkin → Gamma → Krea → Clipdrop</p></article>
+          <article><h3>代码落地</h3><p>v0 / Bolt.new 生成初稿 → Cursor 精修 → 验证 → 部署</p></article>
+        </div>
+      </section>
+    </main>
 
-内容 / 商业表达：
-Perplexity → Napkin → Gamma → Krea → Clipdrop
-
-代码落地：
-v0 / Bolt.new 生成初稿 → Cursor 精修 → 部署</pre>
-    </section>
-
-    <div class="footer">nuwa-free · curated for ReyMao · MIT License</div>
+    <footer class="footer">nuwa-free · curated for ReyMao · MIT License</footer>
   </div>
-<script>
-const tools = [
-  ['Cursor','https://cursor.com/','AI 编程','Hobby 免费，有限 Agent/Tab','AI 功能建议登录',['本地代码开发','修 bug / 重构','接 API / 性能优化'],'v0 / Bolt 生成初稿后，用 Cursor 精修到可上线。'],
-  ['v0','https://v0.app/','前端生成','Free 计划，credits','需要',['Landing Page','Dashboard','React / Next.js 组件'],'快速生成高质量网站页面和组件初稿。'],
-  ['Bolt.new','https://bolt.new/','无代码建站/应用','Free $0，tokens 限额','需要',['完整网站原型','Web App MVP','AI 工具目录'],'比 v0 更偏完整可运行应用，适合快速做 MVP。'],
-  ['Krea','https://www.krea.ai/','视觉设计','Free plan，daily credits','需要',['Hero 图','网站背景','产品概念图'],'为网站和商业方案快速生成高质量视觉素材。'],
-  ['Gamma','https://gamma.app/zh-cn','PPT/商业方案','Free 计划，有限额度','需要',['商业方案','项目汇报','AI 分享课件'],'把管理经验和 AI 方法论快速包装成演示稿。'],
-  ['Napkin','https://www.napkin.ai/','信息图/流程图','Free Forever，500 credits/week','需要',['流程图','信息图','方法论图解'],'把复杂经验变成可传播、可展示的视觉模型。'],
-  ['Perplexity','https://www.perplexity.ai/','AI 搜索/调研','基础搜索免费','基础可选，高级需要',['竞品分析','趋势调研','技术选型'],'做项目之前快速判断方向、事实和来源。'],
-  ['Clipdrop','https://clipdrop.co/','图片处理','Free plan，多工具每日限额','部分免登录，更多额度需登录',['去背景','图片清理','补光/放大/文字移除'],'替代轻量 Photoshop 工作，快速处理网站素材。']
-];
-document.getElementById('toolGrid').innerHTML = tools.map((t,i)=>`<article class="tool"><div class="toolTop"><h3>${t[0]}</h3><span class="num">#${i+1}</span></div><div class="tags"><span class="tag">${t[2]}</span><span class="tag free">${t[3]}</span></div><p><b>注册：</b>${t[4]}</p><p>${t[6]}</p><ul>${t[5].map(x=>`<li>${x}</li>`).join('')}</ul><a class="open" href="${t[1]}" target="_blank" rel="noopener noreferrer" aria-label="打开 ${t[0]} 官网（新窗口）">打开 ${t[0]}</a></article>`).join('');
-</script>
-<noscript>
-  <section style="margin-top:36px;padding:22px;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(255,255,255,.045);color:#cdd8ee;line-height:1.7">
-    <h2 style="margin:0 0 12px">当前浏览器未启用 JavaScript</h2>
-    <p>工具卡片由 JavaScript 渲染，请启用 JS 后刷新。你也可以直接查看
-      <a href="nuwa-free-tools.json" style="color:#39d4ff">nuwa-free-tools.json</a>
-      或
-      <a href="https://github.com/reymondmeking-dot/nuwa-free" style="color:#39d4ff" rel="noopener noreferrer">GitHub 仓库</a>。
-    </p>
-  </section>
-</noscript>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>

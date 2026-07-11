@@ -7,6 +7,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     strategy:
@@ -17,10 +20,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Setup Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: ${{ matrix.node }}
 
@@ -28,8 +31,5 @@ jobs:
         shell: bash
         run: npm ci --ignore-scripts || npm install --ignore-scripts
 
-      - name: Validate tools JSON against schema
-        run: npm run validate
-
-      - name: Lint HTML
-        run: npm run lint-html
+      - name: Validate and build public site
+        run: npm run check
